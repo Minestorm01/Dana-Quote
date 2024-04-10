@@ -1,8 +1,8 @@
-body {
+body, html {
   margin: 0;
   padding: 0;
   font-family: 'EB Garamond', serif;
-  background-color: #333;
+  background-color: #333; /* Adjust the color to match the exact background of your image if it's not pure black */
   color: white;
   display: flex;
   justify-content: center;
@@ -10,40 +10,52 @@ body {
   height: 100vh;
 }
 
-#container {
-  text-align: center;
+.container {
+  background-color: #1c1c1e; /* This is the container background */
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 300px; /* Adjust this to fit the size of the calculator on your phone screen */
 }
 
-h1 {
-  font-size: 2em;
-  margin-bottom: 0.5em;
+.title {
+  font-size: 24px;
+  font-weight: 600; /* Semi-bold for Garamond */
+  margin-bottom: 20px;
 }
 
-#output {
-  margin: 0.5em 0;
-  padding: 0.5em;
-  border: 1px solid #555;
-  width: 200px;
-  text-align: center;
+.output {
+  background-color: #4d4d4d;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  min-height: 50px; /* Adjust as needed */
 }
 
-input[type="text"] {
-  margin: 0.5em 0;
-  padding: 0.5em;
-  border: 1px solid #555;
-  width: 200px;
+.input-group {
+  margin-bottom: 20px;
 }
 
-button#calculate {
-  margin-top: 1em;
-  padding: 0.5em 1em;
+.input {
+  background-color: #4d4d4d;
   border: none;
-  background-color: #f0ad4e;
+  border-radius: 10px;
+  padding: 10px;
+  width: calc(50% - 20px);
+  margin-right: 10px;
   color: white;
-  font-weight: 600;
-  cursor: pointer;
 }
 
-button#calculate:hover {
-  background-color: #ec971f;
+.input:last-child {
+  margin-right: 0;
+}
+
+.button {
+  background-color: #0a84ff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  color: white;
 }
