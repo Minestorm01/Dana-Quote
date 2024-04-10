@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dana Quote Calculator</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.json">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dana Quote Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Dana Quote Calculator</h1>
-        <input type="text" id="letter1" placeholder="First Letter">
-        <input type="text" id="letter2" placeholder="Second Letter">
-        <button onclick="calculate()">Calculate</button>
-        <div id="result"></div>
-    </div>
-    <script src="script.js"></script>
+  <div id="container">
+    <h1>Dana Quote Calculator</h1>
+    <div id="output">(Output)</div>
+    <input type="text" id="firstLetter" placeholder="First Letter">
+    <input type="text" id="secondLetter" placeholder="Second Letter">
+    <button id="calculate">Calculate</button>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
