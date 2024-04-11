@@ -14,7 +14,6 @@ body, html {
   height: 100vh;
   overflow: hidden;
 }
-
 /* iPhone-specific adjustments, if needed */
 @media only screen and (max-device-width: 812px) { /* Adjust max-device-width as needed for different iPhone models */
   body, html {
@@ -23,22 +22,22 @@ body, html {
   }
 }
 
-/* Desktop browsers can have fixed backgrounds */
 @media (min-width: 768px) {
   body, html {
     background-attachment: fixed;
   }
 }
+
 .container {
-  background-color: rgba(28, 28, 30, 0.8); /* Semi-transparent */
+  background-color: #1c1c1e; /* Non-transparent container background color */
   padding: 20px;
   border-radius: 20px;
   width: 90%;
-  max-width: 300px;
+  max-width: 300px; /* Adjust to fit your design preference */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  position: relative; /* Keeps container on top */
-  z-index: 2; /* Higher z-index so that the container is above the background image */
+  position: relative; /* Ensure container is above the background */
+  z-index: 1; /* Higher z-index so that container is above the background image */
 }
 
 .title {
@@ -49,7 +48,7 @@ body, html {
 }
 
 .output, .input {
-  background-color: #5b697a; /* Adjusted color for input and output boxes */
+  background-color: #5b697a; /* Color for input and output boxes */
   font-family: 'Arial', sans-serif; /* Change font for input/output */
   border: none;
   border-radius: 10px;
