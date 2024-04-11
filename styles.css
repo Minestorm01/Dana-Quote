@@ -6,14 +6,14 @@ body, html {
   background-image: url('icon-512.png'); /* Path to your logo image */
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 50%; /* You can adjust this value as needed */
+  background-size: 75%; /* You can adjust this value as needed */
   background-attachment: fixed; /* This keeps the background image fixed during scroll */
   color: #CDDEF2; /* Light blue text color */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden; /* Hide overflow to prevent scrolling if not needed */
+  overflow: shown; /* Hide overflow to prevent scrolling if not needed */
 }
 
 .container {
