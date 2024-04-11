@@ -3,21 +3,22 @@ body, html {
   padding: 0;
   font-family: 'EB Garamond', serif;
   background-color: #0D1431; /* Dark blue background */
-  background-image: url('icon-512.png'); /* Path to your logo image */
+  background-image: url('Icons/icon-512.png'); /* Ensure the path is correct */
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 75%; /* Adjust this value as needed */
+  background-size: cover; /* Adjust this to 'contain' or specific px to ensure visibility */
   color: #CDDEF2; /* Light blue text color */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden; /* Correct 'shown' to 'hidden' */
+  overflow: hidden;
 }
 
-/* Mobile compatibility for background attachment */
-body, html {
-  background-attachment: scroll; /* Use scroll for mobile compatibility */
+@media (min-width: 768px) {
+  body, html {
+    background-attachment: scroll; /* Removed fixed for broader compatibility */
+  }
 }
 
 /* Desktop browsers can have fixed backgrounds */
