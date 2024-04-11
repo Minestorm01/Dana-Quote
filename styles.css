@@ -6,22 +6,25 @@ body, html {
   background-image: url('icon-512.png'); /* Path to your logo image */
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 75%; /* You can adjust this value as needed */
-  background-attachment: background-attachment: scroll; /* Default for better mobile compatibility */
+  background-size: 75%; /* Adjust this value as needed */
   color: #CDDEF2; /* Light blue text color */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: shown; /* Hide overflow to prevent scrolling if not needed */
-  }
+  overflow: hidden; /* Correct 'shown' to 'hidden' */
+}
 
-/* Desktop browsers typically handle fixed backgrounds better */
+/* Mobile compatibility for background attachment */
+body, html {
+  background-attachment: scroll; /* Use scroll for mobile compatibility */
+}
+
+/* Desktop browsers can have fixed backgrounds */
 @media (min-width: 768px) {
   body, html {
     background-attachment: fixed;
   }
-}
 }
 
 .container {
@@ -32,6 +35,8 @@ body, html {
   max-width: 300px; /* Adjust to fit your design preference */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
+  position: relative; /* Ensure container is above the background */
+  z-index: 2; /* Higher z-index so that container is above the background image */
 }
 
 .title {
@@ -43,7 +48,7 @@ body, html {
 
 .output, .input {
   background-color: #5b697a; /* Adjusted color for input and output boxes */
-  font-family: 'EB Garamond', serif;
+  font-family: 'Arial', sans-serif; /* Change font for input/output */
   border: none;
   border-radius: 10px;
   padding: 10px;
@@ -53,12 +58,12 @@ body, html {
 }
 
 .input {
-  margin-bottom: 20px; /* Added space between input fields and button */
+  margin-bottom: 20px; /* Space between input fields and button */
 }
 
 .button {
   background-color: #484C77; /* Button background color */
-  font-family: 'EB Garamond', serif;
+  font-family: 'Arial', sans-serif; /* Change font for button */
   border: none;
   border-radius: 10px;
   padding: 10px;
@@ -66,4 +71,3 @@ body, html {
   font-size: 16px;
   color: #CDDEF2;
 }
-
