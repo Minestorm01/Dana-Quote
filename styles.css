@@ -2,12 +2,12 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'EB Garamond', serif;
-  background-color: #0D1431; /* A contrasting color to help see the image */
-  background-image: url('icon-512.png'); /* Double-check this path */
+  background-color: #0D1431; /* Dark blue background */
+  background-image: url('icon-512.png'); /* Ensure this path is correct */
   background-repeat: no-repeat;
-  background-position: center center; /* Centers the image */
-  background-size: cover; /* Cover the entire page but might crop the image */
-  color: #CDDEF2;
+  background-position: center center;
+  background-size: cover; /* Scales the background image */
+  color: #CDDEF2; /* Light blue text color */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,9 +15,10 @@ body, html {
   overflow: hidden;
 }
 
+/* Apply a fixed background only on non-mobile devices */
 @media (min-width: 768px) {
   body, html {
-    background-attachment: scroll; /* Change this to scroll for testing */
+    background-attachment: fixed;
   }
 }
 
@@ -29,8 +30,8 @@ body, html {
   max-width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  position: relative; /* No change needed, just to highlight */
-  z-index: 1; /* Ensures container is above the background */
+  position: relative; /* Keeps container on top */
+  z-index: 2; /* Higher z-index so that the container is above the background image */
 }
 
 .title {
