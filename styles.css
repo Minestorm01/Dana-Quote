@@ -3,10 +3,10 @@ body, html {
   padding: 0;
   font-family: 'EB Garamond', serif;
   background-color: #0D1431; /* Dark blue background */
-  background-image: url('icon-512.png'); /* Ensure the path is correct */
+  background-image: url('Icons/icon-512.png'); /* Make sure this path is correct */
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover; /* Adjust this to 'contain' or specific px to ensure visibility */
+  background-size: cover; /* This will cover the entire area, scaling the image as needed */
   color: #CDDEF2; /* Light blue text color */
   display: flex;
   justify-content: center;
@@ -17,7 +17,8 @@ body, html {
 
 @media (min-width: 768px) {
   body, html {
-    background-attachment: scroll; /* Removed fixed for broader compatibility */
+    /* This media query is optional since background-size: cover; 
+       should suffice for scaling across devices. */
   }
 }
 
