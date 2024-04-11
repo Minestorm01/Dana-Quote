@@ -2,17 +2,18 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'EB Garamond', serif;
-  background-color: #0D1431; /* This color should be the blue from your logo */
+  background-color: #0D1431; /* Dark blue background */
   background-image: url('Icon-512x512.png'); /* Path to your logo image */
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-blend-mode: overlay; /* This blends the background color and the image */
-  color: white;
+  background-position: center center;
+  background-size: 50%; /* You can adjust this value as needed */
+  background-attachment: fixed; /* This keeps the background image fixed during scroll */
+  color: #CDDEF2; /* Light blue text color */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden; /* Hide overflow to prevent scrolling if not needed */
 }
 
 .container {
@@ -29,28 +30,25 @@ body, html {
   font-size: 24px;
   font-weight: 600; /* EB Garamond semi-bold */
   margin-bottom: 20px;
+  color: #CDDEF2; /* Light blue text color */
 }
 
-.output {
-  background-color: #858DA0;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  min-height: 50px; /* Adjust as needed */
-}
-
-.input {
-  background-color: #858DA0;
+.output, .input {
+  background-color: #5b697a; /* Adjusted color for input and output boxes */
   border: none;
   border-radius: 10px;
   padding: 10px;
   width: calc(100% - 20px);
   margin-bottom: 10px;
-  color: white;
+  color: #CDDEF2; /* Light blue text color */
+}
+
+.input {
+  margin-bottom: 20px; /* Added space between input fields and button */
 }
 
 .button {
-  background-color: #484C77 ; /* Button background color, matching the logo blue */
+  background-color: #484C77; /* Button background color */
   border: none;
   border-radius: 10px;
   padding: 10px;
