@@ -2,12 +2,12 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'EB Garamond', serif;
-  background-color: #0D1431; /* Dark blue background */
-  background-image: url('Icons/icon-512.png'); /* Make sure this path is correct */
+  background-color: #0D1431; /* A contrasting color to help see the image */
+  background-image: url('icon-512.png'); /* Double-check this path */
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; /* This will cover the entire area, scaling the image as needed */
-  color: #CDDEF2; /* Light blue text color */
+  background-position: center center; /* Centers the image */
+  background-size: cover; /* Cover the entire page but might crop the image */
+  color: #CDDEF2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,28 +17,20 @@ body, html {
 
 @media (min-width: 768px) {
   body, html {
-    /* This media query is optional since background-size: cover; 
-       should suffice for scaling across devices. */
-  }
-}
-
-/* Desktop browsers can have fixed backgrounds */
-@media (min-width: 768px) {
-  body, html {
-    background-attachment: fixed;
+    background-attachment: scroll; /* Change this to scroll for testing */
   }
 }
 
 .container {
-  background-color: #1c1c1e; /* Container background color */
+  background-color: rgba(28, 28, 30, 0.8); /* Semi-transparent */
   padding: 20px;
   border-radius: 20px;
   width: 90%;
-  max-width: 300px; /* Adjust to fit your design preference */
+  max-width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  position: relative; /* Ensure container is above the background */
-  z-index: 2; /* Higher z-index so that container is above the background image */
+  position: relative; /* No change needed, just to highlight */
+  z-index: 1; /* Ensures container is above the background */
 }
 
 .title {
